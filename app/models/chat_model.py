@@ -21,9 +21,9 @@ class PrivateMessage(Base):
     sender_id = Column(Integer, ForeignKey("users.id"), nullable=False)  # 发送者
     receiver_id = Column(Integer, ForeignKey("users.id"), nullable=False)  # 接收者
     message_type = Column(Enum(MessageType), nullable=False)  # 消息类型
-    content = Column(String, nullable=True)  # 文字内容
-    media_url = Column(String, nullable=True)  # 语音/视频/图片的URL
-    encrypted_message = Column(String, nullable=True)  # 加密的文本
+    content = Column(String(255), nullable=True)  # 文字内容
+    media_url = Column(String(255), nullable=True)  # 语音/视频/图片的URL
+    encrypted_message = Column(String(255), nullable=True)  # 加密的文本
     is_read = Column(Boolean, default=False)  # 是否已读
     is_deleted = Column(Boolean, default=False)  # 是否已删除
     is_self_destruct = Column(Boolean, default=False)  # 阅后即焚
@@ -57,9 +57,9 @@ class GroupMessage(Base):
     sender_id = Column(Integer, ForeignKey("users.id"), nullable=False)  # 发送者
     chat_id = Column(Integer, ForeignKey("chat_sessions.id"), nullable=False)  # 群聊会话ID
     message_type = Column(Enum(MessageType), nullable=False)  # 消息类型
-    content = Column(String, nullable=True)  # 文字内容
-    media_url = Column(String, nullable=True)  # 语音/视频/图片的URL
-    encrypted_message = Column(String, nullable=True)  # 加密的文本
+    content = Column(String(255), nullable=True)  # 文字内容
+    media_url = Column(String(255), nullable=True)  # 语音/视频/图片的URL
+    encrypted_message = Column(String(255), nullable=True)  # 加密的文本
     is_deleted = Column(Boolean, default=False)  # 是否已删除
     is_self_destruct = Column(Boolean, default=False)  # 阅后即焚
     self_destruct_after = Column(Integer, nullable=True)  # 阅后即焚秒数
@@ -89,7 +89,7 @@ class ChatSession(Base):
     __tablename__ = "chat_sessions"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)  # 群名称
+    name = Column(String(255), nullable=False)  # 群名称
     owner_id = Column(Integer, ForeignKey("users.id"), nullable=False)  # 群主
     created_at = Column(DateTime, default=datetime.utcnow)  # 创建时间
 

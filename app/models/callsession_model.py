@@ -19,7 +19,7 @@ class CallSession(Base):
     start_time = Column(DateTime, default=datetime.utcnow)
     end_time = Column(DateTime, nullable=True)
     is_video_call = Column(Boolean, default=True)  # 视频通话
-    encryption_key = Column(String, nullable=False)  # 端到端加密密钥（仅存储哈希值）
+    encryption_key = Column(String(255), nullable=False)  # 端到端加密密钥（仅存储哈希值）
 
     caller = relationship("User", foreign_keys=[caller_id])
     receiver = relationship("User", foreign_keys=[receiver_id])
