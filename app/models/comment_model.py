@@ -8,7 +8,7 @@ class Comment(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)  # 评论者
-    content = Column(String, nullable=False)  # 评论内容
+    content = Column(String(255), nullable=False)  # 评论内容
     created_at = Column(DateTime, default=datetime.utcnow)  # 创建时间
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)  # 更新时间
     is_deleted = Column(Boolean, default=False)  # 是否被删除

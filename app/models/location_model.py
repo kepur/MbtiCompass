@@ -10,9 +10,9 @@ class UserLocation(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False, unique=True)  # 用户 ID
     latitude = Column(Float, nullable=False)  # 纬度
     longitude = Column(Float, nullable=False)  # 经度
-    country = Column(String, nullable=True)  # 国家
-    city = Column(String, nullable=True)  # 城市
-    address = Column(String, nullable=True)  # 详细地址
+    country = Column(String(100), nullable=True)  # ✅ 修正：加上长度
+    city = Column(String(100), nullable=True)  # ✅ 修正：加上长度
+    address = Column(String(255), nullable=True)  # ✅ 修正：加上长度
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)  # 更新时间
 
     # 关系
@@ -23,9 +23,8 @@ class Business(Base):
     __tablename__ = "businesses"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)
-    category = Column(String, nullable=False)  # cafe, bar, restaurant, etc.
+    name = Column(String(255), nullable=False)  # ✅ 修正：加上长度
+    category = Column(String(100), nullable=False)  # ✅ 修正：加上长度
     latitude = Column(Float, nullable=False)
     longitude = Column(Float, nullable=False)
-    rating = Column(Float, default=0.0)
-
+    rating = Column(Float, nullable=True)  # ✅ 允许 NULL，避免 0.0 误导用户

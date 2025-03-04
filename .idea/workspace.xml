@@ -5,27 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96973db5-9006-4c98-9196-cc8047dfb635" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/MbtiCompass.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/db/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/db/redis_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/media/process_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tasks/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gin-blog-web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/data.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/db/mysql_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/migrate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dramatiq_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dramatiq_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/callsession_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/callsession_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/chat_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/chat_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comment_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comment_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/events_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/events_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/location_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/location_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/match_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/match_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/payment_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/payment_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/post_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/tags_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/tags_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,12 +194,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741058248191</updated>
-      <workItem from="1741058249942" duration="24572000" />
+      <workItem from="1741058249942" duration="31756000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/models/events_model.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MbtiCompass$test_ckeditor.coverage" NAME="test_ckeditor Coverage Results" MODIFIED="1741097535307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/tasks" />
