@@ -52,4 +52,4 @@ def readiness_probe():
 
 if __name__ == "__main__":
     log_event("fastapi", "🚀 FastAPI 启动中...", "info")
-    uvicorn.run("runserver:app", host="127.0.0.1", port=19999, reload=True)
+    uvicorn.run("runserver:app", host="127.0.0.1", port=1992, reload=True)

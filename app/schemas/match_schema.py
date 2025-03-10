@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
-from ..models.enums import ZodiacEnum, MBTIEnum, EducationEnum
+from app.models.enums_model import ZodiacEnum, MBTIEnum, EducationEnum
 
 class MatchPreferenceCreate(BaseModel):
     min_age: int = 18

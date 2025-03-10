@@ -7,18 +7,17 @@ class UserLocation(Base):
     __tablename__ = "user_locations"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id"), nullable=False, unique=True)  # 用户 ID
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)  # 用户 ID
     latitude = Column(Float, nullable=False)  # 纬度
     longitude = Column(Float, nullable=False)  # 经度
     country = Column(String(100), nullable=True)  # ✅ 修正：加上长度
     city = Column(String(100), nullable=True)  # ✅ 修正：加上长度
     address = Column(String(255), nullable=True)  # ✅ 修正：加上长度
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)  # 更新时间
+    updated_at = Column(DateTime, default=datetime.now, onupdate=datetime.now)  # 更新时间
 
     # 关系
-    user = relationship("User", back_populates="location")
-
-
+    user = relationship("User", back_populates="locations")  # 改为复数 "locations"
+    posts = relationship("Post", back_populates="location")  # 一个位置多个帖子
 class Business(Base):
     __tablename__ = "businesses"
 

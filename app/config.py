@@ -16,6 +16,18 @@ class BaseConfig(BaseSettings):
     # ✅ JWT 配置
     JWT_SECRET_KEY: str = "HOZINWANG"  # 默认密钥
     ALGORITHM: ClassVar[str] = "HS256"  # 避免 Pydantic 解析
+    ACCESS_TOKEN_EXPIRE_MINUTES:int = 3660
+    # 验证码 & 频率控制
+    CODE_EXPIRE_TIME:int = 600  # 5 分钟
+    REQUEST_LIMIT_TIME:int = 3600  # 1 小时
+    MAX_REQUESTS_PER_HOUR:int = 100  # 限制 1 小时内最多 3 次
+    MAX_IP_REQUESTS_PER_HOUR:int = 100
+    CODE_LENGTH:int = 6  # 验证码长度
+    # 腾讯云 SMTP 配置
+    SMTP_SERVER :str= "smtp.qcloudmail.com"
+    SMTP_PORT :int= 465
+    SMTP_USERNAME :str= "offical@sanaoll.com"
+    SMTP_PASSWORD :str= "WllyXS+GM08)#"
 
     # ✅ MySQL 数据库配置（用于 Tortoise-ORM & SQLAlchemy）
     DB_USERNAME: str = "S1034363"
@@ -31,8 +43,8 @@ class BaseConfig(BaseSettings):
     # ✅ Redis 相关配置（支持 `Celery`）
     REDIS_HOST: str = "205.189.160.142"
     REDIS_PORT: int = 9736
-    REDIS_DB_BROKER: int = 0  # Celery 任务队列
-    REDIS_DB_RESULT: int = 1  # Celery 任务结果存储
+    REDIS_DB_BROKER: int = 3  # Celery 任务队列
+    REDIS_DB_RESULT: int = 4  # Celery 任务结果存储
     REDIS_PASSWORD: str = "s1034363"
 
     # ✅ **ai models 配置**

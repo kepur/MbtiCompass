@@ -1,1 +1,10 @@
-*.pyc
+/.idea/
+/venv
+*__pycache__*
+*.sql         
+*.mp4        
+*.pyc            
+*.iml
+*.zip
+*.log
+/alembic/*

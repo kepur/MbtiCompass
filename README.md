@@ -62,6 +62,7 @@ net stop mysql && net start mysql  # Windows
 
 alembic revision --autogenerate -m "Initial migration"
 alembic upgrade head
+alembic revision --autogenerate -m "add user table"
 
 #### SMS Sending
 删除所有表
