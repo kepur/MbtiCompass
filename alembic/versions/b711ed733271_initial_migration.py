@@ -1,8 +1,8 @@
 """Initial migration
 
-Revision ID: e34df226bcfb
+Revision ID: b711ed733271
 Revises: 
-Create Date: 2025-03-05 00:32:30.934843
+Create Date: 2025-03-10 19:41:05.319367
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'e34df226bcfb'
+revision: str = 'b711ed733271'
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -58,10 +58,12 @@ def upgrade() -> None:
     op.create_index(op.f('ix_tags_id'), 'tags', ['id'], unique=False)
     op.create_table('users',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('email', sa.String(length=255), nullable=False),
+    sa.Column('email', sa.String(length=255), nullable=True),
+    sa.Column('phone_number', sa.String(length=50), nullable=True),
     sa.Column('hashed_password', sa.String(length=255), nullable=False),
     sa.Column('is_verified', sa.Boolean(), nullable=True),
     sa.Column('created_at', sa.DateTime(), nullable=True),
+    sa.Column('is_active', sa.Boolean(), nullable=True),
     sa.Column('username', sa.String(length=255), nullable=False),
     sa.Column('birthdate', sa.DateTime(), nullable=True),
     sa.Column('gender', sa.String(length=255), nullable=True),
@@ -73,10 +75,12 @@ def upgrade() -> None:
     sa.Column('bazi', sa.String(length=50), nullable=True),
     sa.Column('wuxing', sa.String(length=20), nullable=True),
     sa.Column('favorite_music', sa.Text(), nullable=True),
+    sa.Column('role', sa.Enum('USER', 'ADMIN', name='userrole'), nullable=False),
     sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('email'),
+    sa.UniqueConstraint('phone_number'),
     sa.UniqueConstraint('username')
     )
-    op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)
     op.create_index(op.f('ix_users_id'), 'users', ['id'], unique=False)
     op.create_table('blocked_users',
     sa.Column('id', sa.Integer(), nullable=False),
@@ -107,6 +111,7 @@ def upgrade() -> None:
     sa.Column('name', sa.String(length=255), nullable=False),
     sa.Column('owner_id', sa.Integer(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=True),
+    sa.Column('status', sa.Enum('ACTIVE', 'DISSOLVED', name='chatstatus'), nullable=False),
     sa.ForeignKeyConstraint(['owner_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
@@ -154,8 +159,7 @@ def upgrade() -> None:
     sa.Column('address', sa.String(length=255), nullable=True),
     sa.Column('updated_at', sa.DateTime(), nullable=True),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
-    sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('user_id')
+    sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_user_locations_id'), 'user_locations', ['id'], unique=False)
     op.create_table('user_tags',
@@ -166,15 +170,12 @@ def upgrade() -> None:
     sa.PrimaryKeyConstraint('user_id', 'tag_id')
     )
     op.create_table('chat_members',
-    sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('chat_id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
-    sa.Column('joined_at', sa.DateTime(), nullable=True),
     sa.ForeignKeyConstraint(['chat_id'], ['chat_sessions.id'], ),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
-    sa.PrimaryKeyConstraint('id')
+    sa.PrimaryKeyConstraint('chat_id', 'user_id')
     )
-    op.create_index(op.f('ix_chat_members_id'), 'chat_members', ['id'], unique=False)
     op.create_table('events',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=255), nullable=False),
@@ -234,13 +235,13 @@ def upgrade() -> None:
     op.create_table('comments',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
-    sa.Column('content', sa.String(length=255), nullable=False),
+    sa.Column('post_id', sa.Integer(), nullable=True),
+    sa.Column('event_id', sa.Integer(), nullable=True),
+    sa.Column('parent_id', sa.Integer(), nullable=True),
+    sa.Column('content', sa.String(length=500), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=True),
     sa.Column('updated_at', sa.DateTime(), nullable=True),
     sa.Column('is_deleted', sa.Boolean(), nullable=True),
-    sa.Column('parent_id', sa.Integer(), nullable=True),
-    sa.Column('post_id', sa.Integer(), nullable=True),
-    sa.Column('event_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['event_id'], ['events.id'], ),
     sa.ForeignKeyConstraint(['parent_id'], ['comments.id'], ),
     sa.ForeignKeyConstraint(['post_id'], ['posts.id'], ),
@@ -258,6 +259,13 @@ def upgrade() -> None:
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_event_interests_id'), 'event_interests', ['id'], unique=False)
+    op.create_table('event_participants',
+    sa.Column('event_id', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.ForeignKeyConstraint(['event_id'], ['events.id'], ),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('event_id', 'user_id')
+    )
     op.create_table('event_payments',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('event_id', sa.Integer(), nullable=False),
@@ -279,9 +287,20 @@ def upgrade() -> None:
     sa.ForeignKeyConstraint(['event_id'], ['events.id'], ),
     sa.ForeignKeyConstraint(['tag_id'], ['event_tags.id'], )
     )
+    op.create_table('post_audios',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('post_id', sa.Integer(), nullable=False),
+    sa.Column('local_file_path', sa.String(length=255), nullable=True),
+    sa.Column('audio_url', sa.String(length=255), nullable=False),
+    sa.Column('uploaded_at', sa.DateTime(), nullable=True),
+    sa.ForeignKeyConstraint(['post_id'], ['posts.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_index(op.f('ix_post_audios_id'), 'post_audios', ['id'], unique=False)
     op.create_table('post_images',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('post_id', sa.Integer(), nullable=False),
+    sa.Column('local_file_path', sa.String(length=255), nullable=True),
     sa.Column('image_url', sa.String(length=255), nullable=False),
     sa.Column('uploaded_at', sa.DateTime(), nullable=True),
     sa.ForeignKeyConstraint(['post_id'], ['posts.id'], ),
@@ -291,6 +310,7 @@ def upgrade() -> None:
     op.create_table('post_videos',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('post_id', sa.Integer(), nullable=False),
+    sa.Column('local_file_path', sa.String(length=255), nullable=True),
     sa.Column('video_url', sa.String(length=255), nullable=False),
     sa.Column('uploaded_at', sa.DateTime(), nullable=True),
     sa.ForeignKeyConstraint(['post_id'], ['posts.id'], ),
@@ -333,9 +353,12 @@ def downgrade() -> None:
     op.drop_table('post_videos')
     op.drop_index(op.f('ix_post_images_id'), table_name='post_images')
     op.drop_table('post_images')
+    op.drop_index(op.f('ix_post_audios_id'), table_name='post_audios')
+    op.drop_table('post_audios')
     op.drop_table('event_tag_association')
     op.drop_index(op.f('ix_event_payments_id'), table_name='event_payments')
     op.drop_table('event_payments')
+    op.drop_table('event_participants')
     op.drop_index(op.f('ix_event_interests_id'), table_name='event_interests')
     op.drop_table('event_interests')
     op.drop_index(op.f('ix_comments_id'), table_name='comments')
@@ -346,7 +369,6 @@ def downgrade() -> None:
     op.drop_table('group_messages')
     op.drop_index(op.f('ix_events_id'), table_name='events')
     op.drop_table('events')
-    op.drop_index(op.f('ix_chat_members_id'), table_name='chat_members')
     op.drop_table('chat_members')
     op.drop_table('user_tags')
     op.drop_index(op.f('ix_user_locations_id'), table_name='user_locations')
@@ -362,7 +384,6 @@ def downgrade() -> None:
     op.drop_index(op.f('ix_blocked_users_id'), table_name='blocked_users')
     op.drop_table('blocked_users')
     op.drop_index(op.f('ix_users_id'), table_name='users')
-    op.drop_index(op.f('ix_users_email'), table_name='users')
     op.drop_table('users')
     op.drop_index(op.f('ix_tags_id'), table_name='tags')
     op.drop_table('tags')

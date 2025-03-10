@@ -20,4 +20,4 @@ class MatchPreference(Base):
     max_distance = Column(Float, nullable=True)  # 允许的最大距离（单位：公里），可为空
 
     # 关系绑定
-    user = relationship("User", back_populates="match_preferences")  # 绑定到 User 表，形成一对一关系
+    user = relationship("User", back_populates="match_preferences")  # 一对一反向关系

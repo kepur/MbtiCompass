@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.dramatiq_setup import *  # 确保最先加载 broker 配置
 from contextlib import asynccontextmanager
 from app.config import settings
+from app.api import api_router
 logger = logging.getLogger("uvicorn")
 
 @asynccontextmanager
@@ -42,6 +43,7 @@ def create_app() -> FastAPI:
     env = os.getenv("ENV", "development")
     print(f"Running in {env} mode")
     # ✅ 添加 WebSocket 实时监听路由
+    app.include_router(api_router)
 
     return app
 

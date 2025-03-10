@@ -1,7 +1,4 @@
 import enum
-
-from enum import Enum as PyEnum
-
 from enum import Enum as PyEnum
 
 class EventType(PyEnum):

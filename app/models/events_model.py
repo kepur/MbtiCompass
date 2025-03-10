@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from .base import Base
 from enum import Enum as PyEnum
-
+from .m2m_associations_model import event_participants
 # 活动类型
 class EventType(PyEnum):
     PRIVATE = "私人"
@@ -96,14 +96,16 @@ class Event(Base):
     location_id = Column(Integer, ForeignKey("event_locations.id"))  # 位置 ID
     cancelled_reason = Column(String(1024), nullable=True)  # 取消原因
 
-    # 关系
-    organizer = relationship("User", back_populates="events")
+
+    # 关系字段
+    organizer = relationship("User", back_populates="organized_events")
+    participants = relationship("User", secondary=event_participants, back_populates="joined_events")
+
     tags = relationship("EventTag", secondary=event_tag_association, back_populates="events")
     location = relationship("EventLocation", back_populates="events")
-    payment = relationship("EventPayment", back_populates="event", uselist=False)
-    participants = relationship("EventParticipant", back_populates="event")
-    interested_users = relationship("EventInterest", back_populates="event")
+    payment = relationship("EventPayment", back_populates="event", uselist=False)  # 一对一
     comments = relationship("Comment", back_populates="event")  # 活动的所有评论
+    interested_users = relationship("EventInterest", back_populates="event")
 
     def check_participants(self):
         """ 检查人数是否达到要求，未达最小人数则取消 """

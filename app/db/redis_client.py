@@ -1,7 +1,7 @@
 import os
 import redis
 import logging
-from app.core.config import settings
+from app.config import settings
 # 获取 Redis 配置
 REDIS_HOST = settings.REDIS_HOST
 REDIS_PORT = settings.REDIS_PORT

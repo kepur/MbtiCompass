@@ -5,22 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96973db5-9006-4c98-9196-cc8047dfb635" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/alembic/versions/3ac7e023af95_update_location_and_user_event_commenty_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/versions/6f284b403cad_initial_migration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/versions/7a5d342d9390_update_location_and_user_event_payment_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/versions/7e9d1b87976f_update_location_and_user_relation_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/versions/aa072bb14c6c_update_location_and_user_birthdate_can_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/versions/b0acfaacee6a_update_location_and_user_event_payment_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/versions/b6f401b4c669_update_location_and_user_event_payment_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/auth_res.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/comment_res.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/user_res.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/m2m_associations_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/schemas/comment_schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/schemas/post_schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/template/mail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic/versions/e34df226bcfb_initial_migration.py" beforeDir="false" afterPath="$PROJECT_DIR$/alembic/versions/b711ed733271_initial_migration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/mysql_session.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/migrate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dramatiq_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dramatiq_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/article_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/article_res.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/authuser_res.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/li_02.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/match_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/match_res.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/userlocation_res.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/security.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/db/redis_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/redis_client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/callsession_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/callsession_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/chat_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/chat_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/comment_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comment_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/enums_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/enums_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/events_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/events_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/location_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/location_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/match_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/match_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/payment_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/payment_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/post_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/tags_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/tags_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/tags_model.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/article_schema.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/location_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/location_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/match_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/match_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/user_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/user_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/media/process_audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/media/process_audio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/media/process_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/media/process_video.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tasks/test_ckeditor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/runserver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +63,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -51,6 +84,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.base.executor": "Run",
     "Python.bazi_utils.executor": "Run",
     "Python.li_02.executor": "Run",
     "Python.test_ckeditor.executor": "Run",
@@ -70,14 +106,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CodeStart\MbtiCompass\app\schemas" />
+      <recent name="D:\CodeStart\MbtiCompass\app\core" />
+      <recent name="D:\CodeStart\MbtiCompass\app\services" />
       <recent name="D:\CodeStart\MbtiCompass\app\models" />
       <recent name="D:\CodeStart\MbtiCompass\app\utils" />
-      <recent name="D:\CodeStart\MbtiCompass\app\services\media" />
-      <recent name="D:\CodeStart\MbtiCompass\app\services" />
-      <recent name="D:\CodeStart\MbtiCompass\app\api" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_ckeditor">
+  <component name="RunManager" selected="Python.base">
     <configuration name="MbtiCompass" type="PythonConfigurationType" factoryName="Python">
       <module name="MbtiCompass" />
       <option name="ENV_FILES" value="" />
@@ -92,7 +128,30 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\CodeStart\MbtiCompass\app\tasks\test_ckeditor.py" />
+      <option name="SCRIPT_NAME" value="D:\CodeStart\MbtiCompass\app\schemas\comment_schema.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MbtiCompass" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/models/base.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,7 +183,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="li_02" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="comment_res" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MbtiCompass" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,7 +197,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/api/li_02.py" />
+      <option name="SCRIPT_NAME" value="D:\CodeStart\MbtiCompass\app\api\comment_res.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,7 +206,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_ckeditor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="comment_schema" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MbtiCompass" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,7 +220,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/tasks/test_ckeditor.py" />
+      <option name="SCRIPT_NAME" value="D:\CodeStart\MbtiCompass\app\schemas\comment_schema.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,9 +231,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_ckeditor" />
+        <item itemvalue="Python.base" />
+        <item itemvalue="Python.comment_schema" />
         <item itemvalue="Python.bazi_utils" />
-        <item itemvalue="Python.li_02" />
+        <item itemvalue="Python.comment_res" />
       </list>
     </recent_temporary>
   </component>
@@ -194,26 +254,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741058248191</updated>
-      <workItem from="1741058249942" duration="31756000" />
+      <workItem from="1741058249942" duration="33020000" />
+      <workItem from="1741139624733" duration="4488000" />
+      <workItem from="1741226019793" duration="6717000" />
+      <workItem from="1741404571550" duration="41274000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/models/events_model.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MbtiCompass$test_ckeditor.coverage" NAME="test_ckeditor Coverage Results" MODIFIED="1741097535307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/tasks" />
+    <SUITE FILE_PATH="coverage/MbtiCompass$base.coverage" NAME="base Coverage Results" MODIFIED="1741606848289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" />
     <SUITE FILE_PATH="coverage/MbtiCompass$li_02.coverage" NAME="li_02 Coverage Results" MODIFIED="1741088705187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/api" />
     <SUITE FILE_PATH="coverage/MbtiCompass$bazi_utils.coverage" NAME="bazi_utils Coverage Results" MODIFIED="1741097318579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/utils" />
   </component>
