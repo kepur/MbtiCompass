@@ -9,7 +9,7 @@ from .m2m_associations_model import event_participants,chat_members
 
 
 # 用户与标签的多对多关系表
-user_tags = Table(
+User_Tags = Table(
     "user_tags",
     Base.metadata,
     Column("user_id", Integer, ForeignKey("users.id"), primary_key=True),
@@ -20,7 +20,7 @@ class Tag(Base):
     __tablename__ = "tags"
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(255), unique=True, nullable=False)
-    users = relationship("User", secondary=user_tags, back_populates="tags")  # 反向关系
+    users = relationship("User", secondary=User_Tags, back_populates="tags")  # 反向关系
 
 
 # 🔹 用户角色枚举
@@ -61,7 +61,7 @@ class User(Base):
     # 📌 关系
     # 与 ChatSession 的多对多关系
     posts = relationship("Post", back_populates="user")
-    tags = relationship("Tag", secondary=user_tags, back_populates="users")  # 用户自定义标签
+    tags = relationship("Tag", secondary=User_Tags, back_populates="users")  # 用户自定义标签
 
     comments = relationship("Comment", back_populates="user")  # 用户的所有评论
     role = Column(SQLEnum(UserRole), default=UserRole.USER, nullable=False)  # 角色（默认为普通用户）
@@ -76,6 +76,8 @@ class User(Base):
     # 确保 event_interests 关系定义正确
     event_interests = relationship("EventInterest", back_populates="user")
     match_preferences = relationship("MatchPreference", back_populates="user", uselist=False)  # 一对一关系
+    collections = relationship("MediaCollection", back_populates="user")
+
 
 class BlockedUsers(Base):
     __tablename__ = "blocked_users"

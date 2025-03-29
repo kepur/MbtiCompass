@@ -8,3 +8,8 @@
 *.zip
 *.log
 /alembic/*
+/app/static/*
+*.jpg
+*.png
+*.mct
+*.mp3

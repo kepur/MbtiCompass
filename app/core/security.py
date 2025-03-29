@@ -7,6 +7,10 @@ from datetime import timedelta, datetime, timezone
 from jose import JWTError, jwt
 from passlib.hash import pbkdf2_sha256  # ✅ 使用 pbkdf2_sha256 替代 bcrypt
 from app.config import settings
+from fastapi.security import OAuth2PasswordBearer
+from fastapi import Security
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")  # tokenUrl 只是文档用，写对就行
 
 # 🔹 JWT 配置
 SECRET_KEY = settings.JWT_SECRET_KEY
@@ -21,7 +25,11 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
     """ ✅ 校验密码 """
     return pbkdf2_sha256.verify(plain_password, hashed_password)
 
-async def get_current_user(token: str, db: AsyncSession = Depends(get_async_db)) -> User:
+# async def get_current_user(token: str, db: AsyncSession = Depends(get_async_db)) -> User:
+async def get_current_user(
+            token: str = Security(oauth2_scheme),
+            db: AsyncSession = Depends(get_async_db)
+    ) -> User:
     """ ✅ 获取当前登录用户（检查 JWT 令牌） """
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])

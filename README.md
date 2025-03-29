@@ -13,6 +13,10 @@ config.set_main_option("sqlalchemy.url", settings.SYNC_DATABASE_URL)
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 target_metadata = Base.metadata
+
+
+python.exe .\watchdog_uploadfile.py
+dramatiq --processes 1 --threads 3 dramatiq_worker 
 ```
 
 ### Authentication

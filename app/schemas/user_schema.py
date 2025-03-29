@@ -53,7 +53,7 @@ class RegisterRequest(BaseModel):
 class LoginRequest(BaseModel):
     email: Optional[EmailStr] = None
     phone_number: Optional[str] = None
-    password: str = Field(..., min_length=6, max_length=20)
+    password: str = Field(..., min_length=4, max_length=20)
 
     @classmethod
     @field_validator("email", "phone_number", mode="before")
@@ -104,3 +104,31 @@ class UserResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class TagCreate(BaseModel):
+    name: str
+    description: Optional[str] = None
+    created_at: datetime
+    updated_at: datetime
+
+class TagUpdate(BaseModel):
+    name: Optional[str] = None
+    description: Optional[str] = None
+    updated_at: datetime
+
+
+class TagResponse(BaseModel):
+    id: int
+    name: str
+    description: Optional[str] = None
+    created_at: datetime
+    updated_at: datetime
+
+
+class TagDelete(BaseModel):
+    id: int
+    name: str
+    description: Optional[str] = None
+    created_at: datetime
+    updated_at: datetime

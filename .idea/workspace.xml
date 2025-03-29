@@ -5,54 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96973db5-9006-4c98-9196-cc8047dfb635" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/alembic/versions/3ac7e023af95_update_location_and_user_event_commenty_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic/versions/6f284b403cad_initial_migration.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic/versions/7a5d342d9390_update_location_and_user_event_payment_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic/versions/7e9d1b87976f_update_location_and_user_relation_table.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic/versions/aa072bb14c6c_update_location_and_user_birthdate_can_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic/versions/b0acfaacee6a_update_location_and_user_event_payment_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alembic/versions/b6f401b4c669_update_location_and_user_event_payment_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/auth_res.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/comment_res.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/user_res.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/m2m_associations_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/comment_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/post_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/static/template/mail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/auth/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/auth/decode_res.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/auth/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/auth/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/connection/chat_res.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/connection/media_res.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/connection/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/upload_res.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/schemas/process_audio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/media/test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/oss_upload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/convert/vods/1080p/u4_25032921_28_0000.m3u8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/convert/vods/1080p/u4_25032921_28_0000_segment_000.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/convert/vods/1080p/u4_25032921_30_0000.m3u8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/convert/vods/1080p/u4_25032921_30_0000_segment_000.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/convert/vods/720p/u4_25032921_28_0000.m3u8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/convert/vods/720p/u4_25032921_28_0000_segment_000.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/convert/vods/720p/u4_25032921_30_0000.m3u8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/convert/vods/720p/u4_25032921_30_0000_segment_000.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/encryption/vods/1080p/2503/j9dWUr8w0oTX_z-5.mct" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/encryption/vods/720p/2503/j9dWUr8w0oTX_z-5.mct" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/upload/imgs/2503/u4_25032920_20_0000.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/upload/imgs/2503/u4_25032920_22_0000.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/upload/vocs/2503/u4_25032920_21_0000.m4a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tasks/check_m3u8_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tasks/process_convert_2_ts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tasks/process_m3u8_crypto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/watchdog_uploadfile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alembic/versions/e34df226bcfb_initial_migration.py" beforeDir="false" afterPath="$PROJECT_DIR$/alembic/versions/b711ed733271_initial_migration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/article_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/article_res.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/authuser_res.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/li_02.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/article_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/post_res.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/auth_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/auth/auth_res.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/callsession_webrtc.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/connection/callsession_webrtc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/chat_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/auth/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/currentlocation_ws.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/currentlocation_ws.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/events_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/events_res.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/match_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/match_res.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/userlocation_res.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/nearby_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/nearby_res.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/payment_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/payment_res.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/tags_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/tags_res.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/user_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/auth/user_res.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/security.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/redis_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/redis_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/chat_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/chat_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/comment_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comment_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/enums_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/enums_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/events_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/events_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/location_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/location_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/match_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/match_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/post_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/tags_model.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/article_schema.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/location_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/location_schema.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/schemas/match_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/match_schema.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/schemas/user_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/user_schema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/media/process_audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/media/process_audio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/mail_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/mail_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/media/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/auth/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/media/process_audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/connection/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/media/process_image.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/media/process_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/media/process_video.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tasks/test_ckeditor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/runserver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/media/upload_oss.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/media/upload_oss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/sms_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/sms_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tasks/test_db_conn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tasks/test_py_mysql.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dramatiq_worker.py" beforeDir="false" afterPath="$PROJECT_DIR$/dramatiq_worker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +74,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.venv/Lib/site-packages/fastapi/routing.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/.venv/Lib/site-packages/sqlalchemy/engine/result.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -82,38 +98,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.base.executor": "Run",
-    "Python.bazi_utils.executor": "Run",
-    "Python.li_02.executor": "Run",
-    "Python.test_ckeditor.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/CodeStart/MbtiCompass",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.apps.executor&quot;: &quot;Run&quot;,
+    &quot;Python.base.executor&quot;: &quot;Run&quot;,
+    &quot;Python.bazi_utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.encrypt_filename.executor&quot;: &quot;Run&quot;,
+    &quot;Python.li_02.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_encrypt_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_encrypt_filename (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_ckeditor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.watchdog_uploadfile.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CodeStart/MbtiCompass&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.blingyshs.openincursor.OpenInCursorSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CodeStart\MbtiCompass" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\CodeStart\MbtiCompass\app\schemas" />
-      <recent name="D:\CodeStart\MbtiCompass\app\core" />
+      <recent name="D:\CodeStart\MbtiCompass\app\static" />
+      <recent name="D:\CodeStart\MbtiCompass\app\static\encryption\vol\1080p" />
       <recent name="D:\CodeStart\MbtiCompass\app\services" />
-      <recent name="D:\CodeStart\MbtiCompass\app\models" />
-      <recent name="D:\CodeStart\MbtiCompass\app\utils" />
+      <recent name="D:\CodeStart\MbtiCompass\app\api\auth" />
+      <recent name="D:\CodeStart\MbtiCompass\app\api\connection" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.base">
+  <component name="RunManager" selected="Python.watchdog_uploadfile">
     <configuration name="MbtiCompass" type="PythonConfigurationType" factoryName="Python">
       <module name="MbtiCompass" />
       <option name="ENV_FILES" value="" />
@@ -129,6 +153,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="D:\CodeStart\MbtiCompass\app\schemas\comment_schema.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="apps" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MbtiCompass" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/api/auth" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/api/auth/apps.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,53 +207,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="bazi_utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MbtiCompass" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/utils/bazi_utils.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="comment_res" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MbtiCompass" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/api" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\CodeStart\MbtiCompass\app\api\comment_res.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="comment_schema" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="check_m3u8_handler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MbtiCompass" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,7 +221,76 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\CodeStart\MbtiCompass\app\schemas\comment_schema.py" />
+      <option name="SCRIPT_NAME" value="D:\CodeStart\MbtiCompass\app\tasks\check_m3u8_handler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="check_m3u8_handler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MbtiCompass" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/services/media" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\CodeStart\MbtiCompass\app\tasks\check_m3u8_handler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="process_m3u8_crypto" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MbtiCompass" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/tasks" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\CodeStart\MbtiCompass\app\tasks\process_m3u8_crypto.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="watchdog_uploadfile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MbtiCompass" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/watchdog_uploadfile.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -231,18 +301,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.base" />
-        <item itemvalue="Python.comment_schema" />
-        <item itemvalue="Python.bazi_utils" />
-        <item itemvalue="Python.comment_res" />
+        <item itemvalue="Python.watchdog_uploadfile" />
+        <item itemvalue="Python.apps" />
+        <item itemvalue="Python.check_m3u8_handler" />
+        <item itemvalue="Python.process_m3u8_crypto" />
+        <item itemvalue="Python.check_m3u8_handler" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
-        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
+        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
       </set>
     </attachedChunks>
   </component>
@@ -257,17 +328,47 @@
       <workItem from="1741058249942" duration="33020000" />
       <workItem from="1741139624733" duration="4488000" />
       <workItem from="1741226019793" duration="6717000" />
-      <workItem from="1741404571550" duration="41274000" />
+      <workItem from="1741404571550" duration="41760000" />
+      <workItem from="1741658437792" duration="432000" />
+      <workItem from="1741659223207" duration="14670000" />
+      <workItem from="1741920831026" duration="4711000" />
+      <workItem from="1742105714574" duration="18239000" />
+      <workItem from="1742176735939" duration="3973000" />
+      <workItem from="1742270687667" duration="87000" />
+      <workItem from="1742270810292" duration="1983000" />
+      <workItem from="1742275468745" duration="18853000" />
+      <workItem from="1742869732376" duration="7032000" />
+      <workItem from="1742888571853" duration="22997000" />
+      <workItem from="1742954274450" duration="5391000" />
+      <workItem from="1743043938129" duration="2000" />
+      <workItem from="1743080282549" duration="8685000" />
+      <workItem from="1743126701621" duration="37204000" />
+      <workItem from="1743213924321" duration="15792000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/services/media/upload_oss.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MbtiCompass$encrypt_filename.coverage" NAME="encrypt_filename Coverage Results" MODIFIED="1742133565013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/services/media" />
     <SUITE FILE_PATH="coverage/MbtiCompass$test_ckeditor.coverage" NAME="test_ckeditor Coverage Results" MODIFIED="1741097535307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/tasks" />
+    <SUITE FILE_PATH="coverage/MbtiCompass$apps.coverage" NAME="apps Coverage Results" MODIFIED="1742904206544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/api/auth" />
+    <SUITE FILE_PATH="coverage/MbtiCompass$watchdog_uploadfile.coverage" NAME="watchdog_uploadfile Coverage Results" MODIFIED="1743129211841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MbtiCompass$base.coverage" NAME="base Coverage Results" MODIFIED="1741606848289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" />
     <SUITE FILE_PATH="coverage/MbtiCompass$li_02.coverage" NAME="li_02 Coverage Results" MODIFIED="1741088705187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/api" />
+    <SUITE FILE_PATH="coverage/MbtiCompass$process_encrypt_file.coverage" NAME="process_encrypt_file Coverage Results" MODIFIED="1742288818066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/tasks" />
     <SUITE FILE_PATH="coverage/MbtiCompass$bazi_utils.coverage" NAME="bazi_utils Coverage Results" MODIFIED="1741097318579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/utils" />
+    <SUITE FILE_PATH="coverage/MbtiCompass$process_encrypt_filename__1_.coverage" NAME="process_encrypt_filename (1) Coverage Results" MODIFIED="1742303871966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/tasks" />
   </component>
 </project>

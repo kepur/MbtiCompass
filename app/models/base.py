@@ -9,13 +9,28 @@ SYNC_DATABASE_URL = settings.SYNC_DATABASE_URL
 # ✅ **异步数据库 URL**
 ASYNC_DATABASE_URL = settings.ASYNC_DATABASE_URL
 
-
 # ✅ **同步引擎 & Session**
-sync_engine = create_engine(SYNC_DATABASE_URL, echo=True)
+sync_engine = create_engine(
+    SYNC_DATABASE_URL,
+    echo=True,
+    pool_size=settings.DB_POOL_SIZE,
+    max_overflow=settings.DB_MAX_OVERFLOW,
+    pool_timeout=settings.DB_POOL_TIMEOUT,
+    pool_recycle=settings.DB_POOL_RECYCLE,
+    pool_pre_ping=settings.DB_POOL_PRE_PING
+)
 SyncSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=sync_engine)
 
 # ✅ **异步引擎 & Session**
-async_engine = create_async_engine(ASYNC_DATABASE_URL, echo=True)
+async_engine = create_async_engine(
+    ASYNC_DATABASE_URL,
+    echo=True,
+    pool_size=settings.DB_POOL_SIZE,
+    max_overflow=settings.DB_MAX_OVERFLOW,
+    pool_timeout=settings.DB_POOL_TIMEOUT,
+    pool_recycle=settings.DB_POOL_RECYCLE,
+    pool_pre_ping=settings.DB_POOL_PRE_PING
+)
 AsyncSessionLocal = async_sessionmaker(async_engine, expire_on_commit=False)
 
 # ✅ **定义 Base 类（同步 & 异步通用）**

@@ -1,15 +1,8 @@
-m=[[11,22,33],[44,55,66],[77,88,99]]
-print(m[0][0])
-for i in range (len(m)):
-    for j in range(len(m)):
-        print(m[i][j])
+from fastapi import APIRouter, WebSocket
+from app.models.user_model import User
+from app.models.base import get_async_db
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
 
-for i in range(len(m)):
-    for j in range(len(m)):
-        mm=m[i][j]+100
-        a=[]
-        a.append(mm)
-        print(a)
-n=[('naxi',44,1.70),('bob',17,1.86)]
-for (name,age,high) in n:
-    print(name,high)
+
+
